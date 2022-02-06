@@ -32,6 +32,7 @@ justify-content: flex-end;
     height: 300px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .main {
 margin-left: 20px;
@@ -48,4 +49,21 @@ margin-left: 20px;
     padding: 10px 15px;
     margin: 0;
     margin-bottom: 10px;
+  }
+
+  .photo-grid-container {
+      display: flex;
+      justify-content: center;
+  }
+  .photo-grid {
+      width: 900px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  .photo-grid-item {
+      border: 1px solid #fff;
+      width: 300px;
+      height: 300px;
   }
