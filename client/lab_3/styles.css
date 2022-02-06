@@ -1,3 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-container {
+    color: #fff;
+    background-color: #5995DA;
+    padding: 20px 0;
+}
+.menu{
+    border: 1px solid #fff;
+    width: 900px;
+}
 .wrapper {
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
     margin:0;
