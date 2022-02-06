@@ -7,10 +7,14 @@
     color: #fff;
     background-color: #5995DA;
     padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 .menu{
     border: 1px solid #fff;
     width: 900px;
+    display: flex;
+    justify-content: space-between;
 }
 .wrapper {
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
