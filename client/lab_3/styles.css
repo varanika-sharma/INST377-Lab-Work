@@ -1,4 +1,4 @@
-@media only screen and (min-width: 961px) {
+
 * {
     margin: 0;
     padding: 0;
@@ -66,10 +66,10 @@ margin-left: 20px;
       align-items: center;
   }
 .first-item {
-    order: 1;
+    order: 3;
 }
 .last-item {
-    order: -1;
+    order: -3;
 }
   .photo-grid-item {
       border: 1px solid #fff;
@@ -99,5 +99,4 @@ margin-left: 20px;
     background-color: #5995DA;
     flex: initial;
     width: 300px;
-}
 }
