@@ -66,10 +66,10 @@ margin-left: 20px;
       align-items: center;
   }
 .first-item {
-    order: 3;
+    order: 1;
 }
 .last-item {
-    order: -3;
+    order: -1;
 }
   .photo-grid-item {
       border: 1px solid #fff;
