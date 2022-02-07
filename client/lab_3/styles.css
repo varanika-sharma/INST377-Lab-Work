@@ -20,6 +20,7 @@
 border: 1px solid #fff;
 display: flex;
 justify-content: flex-end;
+margin-left: auto;
 }
 .header-container {
     color: #5995DA;
