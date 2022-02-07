@@ -69,7 +69,7 @@ margin-left: 20px;
     order: 2;
 }
 .last-item {
-    order: -4;
+    order: -1;
 }
   .photo-grid-item {
       border: 1px solid #fff;
