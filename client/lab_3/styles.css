@@ -62,11 +62,12 @@ margin-left: 20px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      flex-direction: row-reverse;
+      flex-direction: row;
       align-items: center;
   }
 .first-item {
     order: 1;
+    flex-direction: row;
 }
 .last-item {
     order: -1;
