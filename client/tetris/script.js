@@ -45,5 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
       squares[currentPosition + index].classList.add('tetromino');
     });
   }
-  draw();
 });
+draw();
