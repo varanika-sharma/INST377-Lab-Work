@@ -54,12 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       squares[currentPosition + index].classList.remove('tetromino');
     });
   }
-  function moveDown() {
-    undraw();
-    currentPosition +=width;
-    draw();
-  }
-  timerID = setInterval(moveDown, 1000);
+
 
   function moveLeft() {
     undraw();
@@ -70,15 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     draw();
   }
-  function moveRight() {
-    undraw();
-    const isAtRightEdge = current.some((index) => (currentPosition+index) %width ===width-1);
-    if (!isAtRightEdge) currentPosition +=1;
-    if (current.some((index) => squares[currentPosition + index].classList.contains('taken'))) {
-      currentPosition -=1;
-    }
-    draw();
-  }
+
   function rotate() {
     undraw();
    
@@ -89,18 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     current = theTetrominoes[random][currentRotation];
     draw();
   }
-  function control(e) {
-    if (e.keyCode ===37) {
-      moveLeft();
-    } else if (e.keyCode===38) {
-      rotate();
-    } else if (e.keyCode===39) {
-      moveRight();
-    } else if (e.keyCode===40) {
-      moveDown();
-    }
-  }
-  document.addEventListener('keyup', control);
+  timerID = setInterval(moveDown, 1000);
   const displaySquares = document.querySelectorAll('.mini-grid div');
   const displayWidth = 4;
   const displayIndex = 0;
@@ -131,7 +107,32 @@ document.addEventListener('DOMContentLoaded', () => {
       displayShape();
     }
   }
-  
+  function moveRight() {
+    undraw();
+    const isAtRightEdge = current.some((index) => (currentPosition+index) %width ===width-1);
+    if (!isAtRightEdge) currentPosition +=1;
+    if (current.some((index) => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition -=1;
+    }
+    draw();
+    freeze();
+  }
+}
+
+
+
+function control(e) {
+    if (e.keyCode ===37) {
+      moveLeft();
+    } else if (e.keyCode===38) {
+      rotate();
+    } else if (e.keyCode===39) {
+      moveRight();
+    } else if (e.keyCode===40) {
+      moveDown();
+    }
+
+  document.addEventListener('keyup', control);
   startBtn.addEventListener('click', () => {
     if (timerID) {
       clearInterval(timerID);
