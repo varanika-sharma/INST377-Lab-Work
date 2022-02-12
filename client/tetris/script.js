@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ScoreDisplay = document.querySelector('#score');
   const StartBtn = document.querySelector('#start-button');
   const width = 10;
-  const nextRandom = 0;
+  let nextRandom = 0;
   // The Tetromiones
   const lTetromino = [
     [1, width+1, width+2+1, 2],
@@ -54,16 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function freeze() {
-    if (current.some((index) => squares[currentPosition +index+width].classList.contains('taken'))) {
-      current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
-      random = nextRandom;
-      random = Math.floor(Math.random() * theTetrominoes.length);
-      current = theTetrominoes[random][currentRotation];
-      currentPosition = 4;
-      draw();
-    }
-  }
   function moveDown() {
     undraw();
     currentPosition += width;
@@ -116,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const displayWidth = 4;
   const displayIndex = 0;
 
-  let upNextTetrominoes = [
+  const upNextTetrominoes = [
     [1, displayWidth+1, displayWidth+2+1,2],
     [0,displayWidth, displayWidth+1, displayWidth+2+1],
     [1,displayWidth, displayWidth+1, displayWidth+2],
@@ -127,6 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySquares.forEach((square) => {
       square.classList.remove('tetromino');
     });
-    upNextTetrominoes=upNextTetrominoes[nextRandom];
+    upNextTetrominoes[nextRandom].forEach((square) => {
+      square.classList.remove('tetromino');
+    });
+  }
+  function freeze() {
+    if (current.some((index) => squares[currentPosition +index+width].classList.contains('taken'))) {
+      current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
+      random = nextRandom;
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length);
+      current = theTetrominoes[random][currentRotation];
+      currentPosition = 4;
+      draw();
+      displayShape();
+    }
   }
 });
