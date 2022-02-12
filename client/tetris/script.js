@@ -79,4 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     draw();
   }
+  function control(e) {
+    if (e.keyCode ===37) {
+      moveLeft();
+    }
+  }
+  document.addEventListener('keyup', control);
 });
