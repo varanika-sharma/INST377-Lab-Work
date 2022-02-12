@@ -54,7 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
       squares[currentPosition + index].classList.remove('tetromino');
     });
   }
-
+  function moveDown() {
+    undraw();
+    currentPosition +=width;
+    draw();
+  }
   timerID = setInterval(moveDown, 1000);
 
   function moveLeft() {
