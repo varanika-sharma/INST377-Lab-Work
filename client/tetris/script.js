@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
-  let squares = Array.from(document.querySelectorAll('.grid div'));
+  const squares = Array.from(document.querySelectorAll('.grid div'));
   const ScoreDisplay = document.querySelector('#score');
   const StartBtn = document.querySelector('#start-button');
   const width = 10;
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
   const theTetrominoes = [lTetromino,zTetromnino,tTetromino,oTetromino,iTetromino];
 
-  let currentPosition = 4;
-  let current = theTetrominoes[0][0];
+  const currentPosition = 4;
+  const current = theTetrominoes[0][0];
 
   function draw() {
     current.forEach((index) => {
