@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  
   timerID = setInterval(moveDown, 1000);
 
   function moveLeft() {
