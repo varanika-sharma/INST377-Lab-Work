@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const theTetrominoes = [lTetromino,zTetromnino,tTetromino,oTetromino,iTetromino];
 
   const currentPosition = 4;
+  const currentRotation = 0;
   const random = Math.floor(Math.random()*theTetrominoes.length);
-  console.log(random);
-  const current = theTetrominoes[0][0];
+  const current = theTetrominoes[random][currentRotation];
 
   function draw() {
     current.forEach((index) => {
