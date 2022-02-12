@@ -129,16 +129,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  startBtn.addEventListener('click', () => {
-    if (timerID) {
-      clearInterval(timerID);
-      timerID = null;
-    } else {
-      draw();
-      timerID = setInterval(moveDown, 1000);
-      nextRandom = Math.floor(Math.random()*theTetrominoes.length);
-      displayShape();
-    }
-  })
-  
+  // startBtn.addEventListener('click', () => {
+  // if (timerID) {
+  // clearInterval(timerID);
+  // timerID = null;
+  // } else {
+  // draw();
+  // timerID = setInterval(moveDown, 1000);
+  // nextRandom = Math.floor(Math.random()*theTetrominoes.length);
+  // displayShape();
+  // }
+  // });
 });
