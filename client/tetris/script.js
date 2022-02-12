@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
   function displayShape() {
     displaySquares.forEach((square) => {
-      square.classList.remove('tetromino');
+      squares.classList.remove('tetromino');
     });
     upNextTetrominoes[nextRandom].forEach((square) => {
-      square.classList.remove('tetromino');
+      squares.classList.remove('tetromino');
     });
   }
   function freeze() {
