@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [width, width+2, width +2+1, width+2+2]
   ];
   const zTetromnino = [
-    [0,width,widh+1,width+2+1],
+    [0,width,width+1,width+2+1],
     [width+1,width+2,width+2,width+2+1],
     [0,width,width+1,width+2+1],
     [width+1,width+2,width+2,width+2+1]
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const iTetromino = [
     [1,width+1,width+2+1,width+3+1],
     [width,width+1,width+2,width+3],
-    [1,width+1,widht+2+1,width+3+1],
+    [1,width+1,width+2+1,width+3+1],
     [width,width+1,width+2,width+3]
   ];
   const theTetrominoes = [lTetromino,zTetromnino,tTetromino,oTetromino,iTetromino];
@@ -45,5 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
       squares[currentPosition + index].classList.add('tetromino');
     });
   }
+  draw();
 });
-draw();
