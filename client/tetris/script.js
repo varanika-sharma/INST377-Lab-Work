@@ -47,5 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
       squares[currentPosition + index].classList.add('tetromino');
     });
   }
-  draw();
+  function undraw() {
+    current.forEach((index) => {
+      squares[currentPosition + index].classList.remove('tetromino');
+    })
+  }
 });
