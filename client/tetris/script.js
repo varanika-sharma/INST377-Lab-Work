@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentPosition = 4;
   const currentRotation = 0;
-  const random = Math.floor(Math.random()*theTetrominoes.length);
-  const current = theTetrominoes[random][currentRotation];
+  let random = Math.floor(Math.random()*theTetrominoes.length);
+  let current = theTetrominoes[random][currentRotation];
 
   function draw() {
     current.forEach((index) => {
@@ -53,10 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function freeze() {
+    if (current.some((index) => squares[currentPosition +index+width].classList.contains('taken'))) {
+      current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
+      random = Math.floor(Math.random() * theTetrominoes.length);
+      current = theTetrominoes[random][currentRotation];
+      currentPosition = 4;
+      draw();
+    }
+  }
   function moveDown() {
     undraw();
     currentPosition += width;
     draw();
+    freeze();
   }
   timerID = setInterval(moveDown, 1000);
 });
