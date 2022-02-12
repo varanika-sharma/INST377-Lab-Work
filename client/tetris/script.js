@@ -55,12 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function moveDown() {
-    undraw();
-    currentPosition += width;
-    draw();
-    freeze();
-  }
+  
   timerID = setInterval(moveDown, 1000);
 
   function moveLeft() {
@@ -133,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displayShape();
     }
   }
+  
   startBtn.addEventListener('click', () => {
     if (timerID) {
       clearInterval(timerID);
@@ -144,4 +140,5 @@ document.addEventListener('DOMContentLoaded', () => {
       displayShape();
     }
   })
+  
 });
