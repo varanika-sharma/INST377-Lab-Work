@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
-  const squares = Array.from(document.querySelectorAll('.grid div'));
+  let squares = Array.from(document.querySelectorAll('.grid div'));
   const scoreDisplay = document.querySelector('#score');
   const startBtn = document.querySelector('#start-button');
   const width = 10;
@@ -104,7 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[index].classList.remove('taken');
         });
         const squaresRemoved = squares.splice(i, width);
-        console.log(squaresRemoved);
+        squares = squaresRemoved.concat(squares);
+        squares.forEach((cell) => grid.appendChild(cell));
       }
     }
   }
