@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         draw();
         freeze();
     }
-    timerID = setInterval(moveDown, 1000);
+    // timerID = setInterval(moveDown, 1000);
     const displaySquares = document.querySelectorAll('.mini-grid div');
     const displayWidth = 4;
     const displayIndex = 0;
@@ -124,9 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
       freeze();
     }
   }
-  
-  
-  
   function control(e) {
       if (e.keyCode ===37) {
         moveLeft();
@@ -151,5 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
         displayShape();
       }
     });
+
   });
   
