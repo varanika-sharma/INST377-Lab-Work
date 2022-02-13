@@ -142,6 +142,5 @@ document.addEventListener('DOMContentLoaded', () => {
       nextRandom = Math.floor(Math.random()*theTetrominoes.length);
       displayShape();
     }
-  });
-  
+  });  
 });
