@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (e.keyCode===40) {
         moveDown();
       }
-  }
+  } 
     document.addEventListener('keyup', control);
   
     startBtn.addEventListener('click', () => {
