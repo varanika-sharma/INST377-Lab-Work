@@ -133,6 +133,7 @@ function control(e) {
     }
 }
   document.addEventListener('keyup', control);
+
   startBtn.addEventListener('click', () => {
     if (timerID) {
       clearInterval(timerID);
