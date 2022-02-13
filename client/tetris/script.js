@@ -110,6 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
+  function gameOver() {
+    if (current.some((index) => squares[currentPosition + index].classList.contains('taken'))) {
+      scoreDisplay.innerHTML = 'end';
+      clearInterval(timerID);
+    }
+  }
   function freeze() {
     if (current.some((index) => squares[currentPosition + index + width].classList.contains('taken'))) {
       current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
@@ -120,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       draw();
       displayShape();
       addScore();
+      gameOver();
     }
   }
   function moveDown() {
