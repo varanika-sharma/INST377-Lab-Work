@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentPosition -= 1;
     }
     draw();
-    // freeze();
+    freeze();
   }
   function control(e) {
     if (e.keyCode === 37) {
