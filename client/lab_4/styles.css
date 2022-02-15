@@ -102,7 +102,7 @@ margin-left: 20px;
 }
 
 .carousel .carousel_actions button#carousel_button--prev{
-    margin-left: 140px;
+    margin-left: 20px;
     display: inline-block;
 }
 .carousel .carousel_actions button#carousel_button--next{
@@ -151,7 +151,7 @@ margin-left: 20px;
     }
     100% {
         opacity: 1;
-        transform: opacity linear;
+        transform: opacity;
     }
 
 }
