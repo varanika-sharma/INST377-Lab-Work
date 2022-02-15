@@ -26,9 +26,9 @@ function moveToPrevSlide() {
   }
   updateSlidePosition();
 }
-document.querySelector("#carousel_button--next").addEventListener("click", () => {
+document.querySelector(".carousel_button--next").addEventListener("click", () => {
   moveToNextSlide();
 });
-document.querySelector("#carousel_button--prev").addEventListener("click", () => {
+document.querySelector(".carousel_button--prev").addEventListener("click", () => {
   moveToPrevSlide();
 });
