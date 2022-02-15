@@ -26,14 +26,14 @@ function moveToPrevSlide() {
   }
   updateSlidePosition();
 }
-document.querySelector(".carousel_button--next").addEventListener("click", () => {
+/* document.querySelector(".carousel_button--next").addEventListener("click", () => {
   console.log("click detected");
   moveToNextSlide();
-});
+}); 
 document.querySelector(".carousel_button--prev").addEventListener("click", () => {
   console.log("click detected");
   moveToPrevSlide();
-});
+}); */
 document.querySelector('test-1').addEventListener('click', () => {
   console.log("Message");
 });
