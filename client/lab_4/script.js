@@ -1,19 +1,25 @@
+/* eslint-disable no-restricted-syntax */
 let slidePosition = 0;
 const slides = document.getElementsByClassName('carousel_item');
 const totalSlides = slides.length;
 function updateSlidePosition() {
-
+  for (const slide of slides) {
+    slide.classList.remove('carousel_item--visible');
+    slide.classList.add('carousel_item--hidden');
+  }
 }
 function moveToNextSlide() {
-  if (slidePosition ===totalSlides) {
-    slidePosition=0;
+  updateSlidePosition();
+  if (slidePosition === totalSlides) {
+    slidePosition = 0;
   } else {
     slidePosition += 1;
   }
 }
 function moveToPrevSlide() {
-  if (slidePosition ===0) {
-    slidePosition=0;
+  updateSlidePosition();
+  if (slidePosition === 0) {
+    slidePosition = 0;
   } else {
     slidePosition -= 1;
   }
