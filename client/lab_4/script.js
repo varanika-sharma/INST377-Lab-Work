@@ -3,7 +3,7 @@ let slidePosition = 0;
 const slides = document.getElementsByClassName('carousel_item');
 const totalSlides = slides.length;
 function updateSlidePosition() {
-  for (let slide of slides) {
+  for (const slide of slides) {
     slide.classList.remove('carousel_item--visible');
     slide.classList.add('carousel_item--hidden');
   }
