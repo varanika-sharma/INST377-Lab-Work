@@ -34,6 +34,6 @@ document.querySelector(".carousel_button--prev").addEventListener("click", () =>
   console.log("click detected");
   moveToPrevSlide();
 }); */
-document.querySelector('test-1').addEventListener('click', () => {
+document.querySelector('.test-1').addEventListener('click', () => {
   console.log("Message");
 });
