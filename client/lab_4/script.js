@@ -1,12 +1,12 @@
 /* eslint-disable quotes */
 /* eslint-disable no-restricted-syntax */
 let slidePosition = 0;
-const slides = document.querySelectorAll(".carousel_item");
+const slides = document.querySelectorAll("carousel_item");
 const totalSlides = slides.length;
 function updateSlidePosition() {
   for (const slide of slides) {
-    slide.classList.remove(".carousel_item--visible");
-    slide.classList.add(".carousel_item--hidden");
+    slide.classList.remove("carousel_item--visible");
+    slide.classList.add("carousel_item--hidden");
   }
   slides[slidePosition].classList.add("carousel_item--visible");
 }
@@ -26,9 +26,9 @@ function moveToPrevSlide() {
   }
   updateSlidePosition();
 }
-document.querySelector("carousel_button--next").addEventListener("click", () => {
+document.querySelector("#carousel_button--next").addEventListener("click", () => {
   moveToNextSlide();
 });
-document.querySelector("carousel_button--prev").addEventListener("click", () => {
+document.querySelector("#carousel_button--prev").addEventListener("click", () => {
   moveToPrevSlide();
 });
