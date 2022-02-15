@@ -101,10 +101,10 @@ margin-left: 20px;
 }
 
 .carousel .carousel_actions button#carousel_button--prev{
-    margin-left: 20px;
+    margin-left: auto;
 }
 .carousel .carousel_actions button#carousel_button--next{
-    margin-right: 20px;
+    margin-right: auto;
 }
 .first-item {
     order: 1;
