@@ -1,7 +1,7 @@
 /* eslint-disable quotes */
 /* eslint-disable no-restricted-syntax */
 let slidePosition = 0;
-const slides = document.querySelectorAll("carousel_item");
+const slides = document.querySelectorAll(".carousel_item");
 const totalSlides = slides.length;
 function updateSlidePosition() {
   for (const slide of slides) {
