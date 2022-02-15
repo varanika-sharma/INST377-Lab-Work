@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 let slidePosition = 0;
-const slides = document.getElementsByClassName('carousel_item');
+const slides = document.querySelectorAll('carousel_item');
 const totalSlides = slides.length;
 function updateSlidePosition() {
   for (const slide of slides) {
@@ -25,9 +25,9 @@ function moveToPrevSlide() {
   }
   updateSlidePosition();
 }
-document.getElementById('carousel_button--next').addEventListener('click', () => {
+document.querySelector('carousel_button--next').addEventListener('click', () => {
   moveToNextSlide();
 });
-document.getElementById('carousel_button--prev').addEventListener('click', () => {
+document.querySelector('carousel_button--prev').addEventListener('click', () => {
   moveToPrevSlide();
 });
