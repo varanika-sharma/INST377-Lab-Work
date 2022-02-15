@@ -27,8 +27,10 @@ function moveToPrevSlide() {
   updateSlidePosition();
 }
 document.querySelector(".carousel_button--next").addEventListener("click", () => {
+  console.log("click detected");
   moveToNextSlide();
 });
 document.querySelector(".carousel_button--prev").addEventListener("click", () => {
+  console.log("click detected");
   moveToPrevSlide();
 });
