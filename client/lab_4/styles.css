@@ -78,12 +78,7 @@ margin-left: 20px;
       max-width: 600px;
       height: auto;
   }
-
-.carousel .carousel_item--visible{
-    display: block;
-    animation: fadeVisibility 0.5s;
-}
-.carousel .carousel_actions {
+  .carousel .carousel_actions {
     display: flex;
     width: 100;
     justify-content: space-between;
@@ -96,7 +91,6 @@ margin-left: 20px;
     border-radius:50px;
     border: 0;
     font-weight: bold;
-    cursor: pointer;
     width: 40px;
     height: 40px;
 }
@@ -109,6 +103,12 @@ margin-left: 20px;
     margin-right: 20px;
     display: inline-block;
 }
+
+.carousel .carousel_item--visible{
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
 .first-item {
     order: 1;
    
