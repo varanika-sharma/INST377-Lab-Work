@@ -98,6 +98,7 @@ margin-left: 20px;
     display:flex;
     justify-content: center;
     margin-left: 500px;
+    margin-top: 500px;
     order: -1;
   }  
   .carousel_item img {
