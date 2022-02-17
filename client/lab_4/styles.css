@@ -76,12 +76,6 @@ margin-left: 20px;
       display: none;
   }
 
-  .carousel .carousel_item img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-  }
-
  .carousel_actions {
     display: flex;
     width: 100;
@@ -100,7 +94,8 @@ margin-left: 20px;
     height: 40px;
 }
 
-.carousel_actions button#carousel_button--prev{
+
+  .carousel_actions button#carousel_button--prev{
     position: relative;
     margin-left: 500px;
     width: fit-content;
@@ -109,6 +104,12 @@ margin-left: 20px;
     z-index:1
     
   }  
+  .carousel .carousel_item img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+  }
+
 
 .carousel .carousel_actions button#carousel_button--next{
     margin-left: 240px;
