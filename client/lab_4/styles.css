@@ -100,11 +100,13 @@ margin-left: 20px;
     justify-content: center;
     margin-top: 350px;
     margin-left: 500px;
+    order: 1;
   }  
   .carousel_actions button#carousel_button--prev .carousel .carousel_item img {
       width: 100%;
       max-width: 600px;
       height: auto;
+      order: 2;
   }
 
 
