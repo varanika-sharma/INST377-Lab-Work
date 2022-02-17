@@ -101,11 +101,13 @@ margin-left: 20px;
 }
 
 .carousel_actions button#carousel_button--prev{
+    position: relative;
     margin-left: 500px;
     width: fit-content;
     margin-top: 400px;
     justify-content: center;
     z-index:-1
+    
   }  
 
 .carousel .carousel_actions button#carousel_button--next{
