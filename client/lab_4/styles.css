@@ -75,17 +75,18 @@ margin-left: 20px;
   .carousel .carousel_item--hidden {
       display: none;
   }
+
+  .carousel .carousel_item img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+  }
   .carousel_actions button#carousel_button--prev{
     margin-left: 500px;
     width: fit-content;
     margin-top: 400px;
     justify-content: center;
     z-index:-1
-  }
-  .carousel .carousel_item img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
   }
  .carousel_actions {
     display: flex;
