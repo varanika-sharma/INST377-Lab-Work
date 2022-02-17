@@ -51,7 +51,12 @@ margin-left: 20px;
     margin: 0;
     margin-bottom: 10px;
   }
-
+  .carousel_actions button#carousel_button--prev{
+    margin-left: 500px;
+    width: fit-content;
+    margin-top: 400px;
+    justify-content: center;
+  }
   .photo-grid-container {
       display: flex;
       justify-content: center;
@@ -95,13 +100,8 @@ margin-left: 20px;
     height: 40px;
 }
 
-.carousel_actions button#carousel_button--prev{
-    margin-left: 500px;
-    width: fit-content;
-    margin-top: 400px;
-    justify-content: center;
     
-}
+
 .carousel .carousel_actions button#carousel_button--next{
     margin-left: 175px;
     
