@@ -104,7 +104,7 @@ margin-left: 20px;
     justify-content: center;
     z-index:1
   }  
-  .carousel .carousel_item img {
+  .carousel_actions button#carousel_button--prev .carousel .carousel_item img {
       width: 100%;
       max-width: 600px;
       height: auto;
