@@ -94,8 +94,7 @@ margin-left: 20px;
     height: 40px;
 }
 
-
-div.carousel_actions button#carousel_button--prev{
+.carousel_actions button#carousel_button--prev{
     display:flex;
     justify-content: center;
     margin-left: 500px;
