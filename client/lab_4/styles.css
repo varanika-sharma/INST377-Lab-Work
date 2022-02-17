@@ -97,12 +97,6 @@ margin-left: 20px;
 
 .carousel_actions button#carousel_button--prev{
     display:flex;
-    position: center;
-    margin-left: 450px;
-    width: fit-content;
-    margin-top: 400px;
-    justify-content: center;
-    z-index:1
   }  
   .carousel_actions button#carousel_button--prev .carousel .carousel_item img {
       width: 100%;
