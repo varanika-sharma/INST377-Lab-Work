@@ -76,7 +76,7 @@ margin-left: 20px;
       display: none;
   }
 
- .carousel .carousel_actions {
+ .carousel_actions {
     display: flex;
     width: 100;
     justify-content: space-between;
