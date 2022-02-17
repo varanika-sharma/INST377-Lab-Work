@@ -97,7 +97,7 @@ margin-left: 20px;
 
 .carousel_actions div.button#carousel_button--prev{
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-top: 500px;
     margin-left: 500px;
     order: -1;
