@@ -96,9 +96,9 @@ margin-left: 20px;
 }
 
 .carousel_actions button#carousel_button--prev{
-    margin-left: 250px;
+    margin-left: 500px;
     width: fit-content;
-    margin-top: 350px;
+    margin-top: 400px;
     justify-content: center;
     
 }
