@@ -56,13 +56,7 @@ margin-left: 20px;
       display: flex;
       justify-content: center;
   }
-  .carousel_actions button#carousel_button--prev{
-    margin-left: 500px;
-    width: fit-content;
-    margin-top: 400px;
-    justify-content: center;
-    z-index:-1
-  }
+
   .photo-grid {
       width: 900px;
       display: flex;
@@ -70,6 +64,13 @@ margin-left: 20px;
       flex-wrap: wrap;
       flex-direction: row-reverse;
       align-items: center;
+  }
+  .carousel_actions button#carousel_button--prev{
+    margin-left: 500px;
+    width: fit-content;
+    margin-top: 400px;
+    justify-content: center;
+    z-index:-1
   }
   .carousel {
       overflow: hidden;
