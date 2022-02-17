@@ -95,7 +95,7 @@ margin-left: 20px;
 }
 
 
-.carousel_actions button #carousel_button--prev{
+.carousel_actions button#carousel_button--prev{
     display:inline-flexbox;
     position: center;
     margin-left: 450px;
