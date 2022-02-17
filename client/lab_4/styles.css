@@ -95,7 +95,7 @@ margin-left: 20px;
 }
 
 
-.carousel_actions div.button#carousel_button--prev{
+div.carousel_actions button#carousel_button--prev{
     display:flex;
     justify-content: flex-end;
     margin-top: 500px;
