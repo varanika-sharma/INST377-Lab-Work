@@ -96,13 +96,13 @@ margin-left: 20px;
 
 
   .carousel_actions button#carousel_button--prev{
-    position: relative;
+    display:inline-flexbox;
+    position: absolute;
     margin-left: 200px;
     width: fit-content;
     margin-top: 400px;
     justify-content: center;
     z-index:1
-    
   }  
   .carousel .carousel_item img {
       width: 100%;
