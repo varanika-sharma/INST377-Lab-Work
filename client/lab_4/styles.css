@@ -110,8 +110,7 @@ margin-left: 20px;
       order: 0;
   }
 
-
-.carousel .carousel_actions button#carousel_button--next{
+ .carousel_actions button#carousel_button--next{
     margin-left: 240px;
     
 }
