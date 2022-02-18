@@ -95,6 +95,7 @@ margin-left: 20px;
 }
 
 .carousel_actions button#carousel_button--prev{
+    z-index: 5;
     display:flex;
     justify-content: center;
     margin-left: 500px;
@@ -102,6 +103,7 @@ margin-left: 20px;
     order: -1;
   }  
   .carousel_item img {
+      z-index:1;
       width: 100%;
       max-width: 600px;
       height: auto;
