@@ -109,8 +109,8 @@ margin-left: 20px;
       order: 0;
   }
 
- .carousel_actions button#carousel_button--next{
-    margin-left: 270px;
+ .carousel .carousel_actions button#carousel_button--next{
+    margin-left: 300px;
     
 }
 
