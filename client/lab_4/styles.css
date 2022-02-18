@@ -95,7 +95,7 @@ margin-left: 20px;
 }
 
 .carousel_actions button#carousel_button--prev{
-  justify-content: center;
+  margin-left: 20px;
   }  
   
   .carousel_item img {
@@ -107,7 +107,7 @@ margin-left: 20px;
   }
 
  .carousel .carousel_actions button#carousel_button--next{
-   
+   margin-right: 20px;
 }
 
 .carousel .carousel_item--visible{
