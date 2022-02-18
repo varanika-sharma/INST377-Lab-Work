@@ -94,13 +94,14 @@ margin-left: 20px;
     height: 40px;
 }
 
-.carousel_actions button#carousel_button--prev{
+/*.carousel_actions button#carousel_button--prev{
     display:flex;
     justify-content: center;
     margin-left: 300px;
     margin-top: 375px;
 
   }  
+  */
   .carousel_item img {
       z-index: 1;
       width: 100%;
@@ -108,14 +109,14 @@ margin-left: 20px;
       height: auto;
       order: 0;
   }
-
+/*
  .carousel .carousel_actions button#carousel_button--next{
     display:flex;
     justify-content: center;
     margin-left: 300px;
     
 }
-
+*/
 .carousel .carousel_item--visible{
     display: block;
     animation: fadeVisibility 0.5s;
