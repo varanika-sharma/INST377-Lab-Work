@@ -86,7 +86,7 @@ margin-left: 20px;
 
 }
 
-.carousel_actions button {
+button {
     border-radius:50px;
     border: 0;
     font-weight: bold;
@@ -94,7 +94,7 @@ margin-left: 20px;
     height: 40px;
 }
 
-.carousel_actions button.test-1#carousel_button--prev{
+button.test-1#carousel_button--prev{
   margin-left: 300px;
   margin-top: 500px;
   }  
