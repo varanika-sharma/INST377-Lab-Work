@@ -87,9 +87,6 @@ margin-left: 20px;
 }
 
 .carousel_actions button {
-    border-radius:50px;
-    border: 0;
-    font-weight: bold;
 }
 
 .carousel_actions button.test-1#carousel_button--prev{
