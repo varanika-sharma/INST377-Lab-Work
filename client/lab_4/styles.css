@@ -104,11 +104,11 @@ margin-left: 20px;
       width: 100%;
       max-width: 600px;
       height: auto;
-      order: 0;
   }
 
  .carousel .carousel_actions button.test-2#carousel_button--next{
    margin-left: 300px;
+   order: initial;
 }
 
 .carousel .carousel_item--visible{
