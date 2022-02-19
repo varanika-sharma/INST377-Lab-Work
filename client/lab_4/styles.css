@@ -92,12 +92,12 @@ margin-left: 20px;
 }
 
  .carousel .carousel_actions button#carousel_button--prev{
-    margin-left: 200px;
+    margin-left: 20px;
     
     
 }
 .carousel .carousel_actions button#carousel_button--next{
-    margin-left: 215px;
+    margin-right: 20px;
     
 }
 .photo-grid-container {
