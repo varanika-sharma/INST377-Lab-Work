@@ -74,7 +74,7 @@ margin-left: 20px;
       max-width: 600px;
       height: auto;
   }
-  .carousel_actions {
+  .carousel.carousel_actions {
     display: flex;
     width: 100;
     justify-content: space-between;
@@ -83,7 +83,7 @@ margin-left: 20px;
     transform: translateY(-50%);
 
 }
-.carousel_actions button {
+.carousel.carousel_actions button {
     border-radius:50px;
     border: 0;
     font-weight: bold;
@@ -91,7 +91,7 @@ margin-left: 20px;
     height: 40px;
 }
 
- .carousel_actions button#carousel_button--prev{
+ .carousel.carousel_actions button#carousel_button--prev{
     margin-right: 200px;
     
     
