@@ -25,3 +25,16 @@ body {
   max-width: 960px;
   margin-top: 25px;
 }
+.name {
+  text-align: center;
+  background-color: #84d1cb;
+  border: 1px solid #8c9231;
+  border-radius: 3px;
+  width: 80%;
+  margin: 40px 0;
+  padding: 50px;
+}
+.name h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
