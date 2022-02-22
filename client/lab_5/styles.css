@@ -124,4 +124,6 @@ body {
 .form-row button:active {
   background-color: #407FC7;
 }
-
+div {
+  display:inline-block;
+}
