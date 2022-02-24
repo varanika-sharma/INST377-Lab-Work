@@ -103,6 +103,7 @@ body {
   width: 240px;
   display: inline-block;
 text-align: left;
+font-size: 10px;
 }
 
  input[type='radio'] {
@@ -213,6 +214,7 @@ justify-content: left;
     width: 240px;
     display: inline-block;
   text-align: left;
+  font-size: 10px;
   }
   
   input[type='radio'] {
