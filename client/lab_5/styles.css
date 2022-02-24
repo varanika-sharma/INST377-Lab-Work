@@ -142,7 +142,8 @@ body {
   background-color: #407FC7;
 }
 .next-week {
-  display:block;
+  height: fit-content;
+  width: fit-content;
   border: 2px;
   background-color: lightyellow;
 
