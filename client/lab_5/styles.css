@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap:200px;
 }
 .name {
   text-align: center;
@@ -146,7 +145,7 @@ div.right {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap:200px;
+    
   }
   .form-row {
     flex-direction: row;
