@@ -131,7 +131,7 @@ body {
 div.right {
   display:block;
   border: 2px;
-  background-color: blue;
+  background-color: lightyellow;
   flex-basis: 100%;
 
 }
