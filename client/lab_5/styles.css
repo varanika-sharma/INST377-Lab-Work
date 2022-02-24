@@ -71,7 +71,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
 }
-
+/*
 .form-row.container  {
   background-color: #F6F7F8;
   border: 1px solid #D6D9DC;
@@ -80,6 +80,7 @@ body {
   padding: 7px;
   font-size: 14px;
 }
+*/
 .from-user{
   background-color: #FFFFFF;
   border: 1px solid #D6D9DC;
