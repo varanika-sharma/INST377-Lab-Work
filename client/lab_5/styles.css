@@ -103,6 +103,7 @@ body {
   display: block;
   font-size: 14px;
   padding: 0 20px 0 10px;
+  justify-self: flex-start;
 }
 
 .legacy-form-row input[type='radio'] {
