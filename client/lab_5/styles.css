@@ -106,8 +106,10 @@ body {
   justify-self: flex-start;
 }
 
-.legacy-form-row input[type='radio'] {
-  margin-top: 2px;
+ input[type='radio'] {
+    height: 16px;
+    width:16px;
+    
 }
   
 .legacy-form-row .radio-label,
