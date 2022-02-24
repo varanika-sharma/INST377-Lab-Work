@@ -192,6 +192,7 @@ justify-content: left;
     border: 1px solid #D6D9DC;
     border-radius: 3px;
     width: 100%;
+    padding: 7px;
     font-size: 14px;
   }
   .form-row label {
@@ -211,8 +212,9 @@ justify-content: left;
     font-size: 14px;
   }
   
-  .legacy-form-row input[type='radio'] {
-    margin-top: 6px;
+  input[type='radio'] {
+    height: 16px;
+    width:16px;
   }
     
   .legacy-form-row .radio-label,
