@@ -142,7 +142,7 @@ body {
   background-color: #407FC7;
 }
 div.next-week {
-  align-items: center;
+  text-align: center;
   height: 100px;
   width: 200px;
   border: 2px;
