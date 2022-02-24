@@ -103,13 +103,15 @@ body {
   display: block;
   font-size: 14px;
   padding: 0 20px 0 10px;
-  float: left;
 }
 
+.legacy-form-row input[type='radio'] {
+  margin-top: 2px;
+}
+  
 .legacy-form-row .radio-label,
 .legacy-form-row input[type='radio'] {
   float: left;
-  align-items: flex-start;
 }
 
 .legacy-form-row .from-user
