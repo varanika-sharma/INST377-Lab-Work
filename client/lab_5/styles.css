@@ -72,7 +72,7 @@ body {
   flex-wrap: wrap;
 }
 
-.form-row  {
+.form-row.container  {
   background-color: #FFFFFF;
   border: 1px solid #D6D9DC;
   border-radius: 3px;
