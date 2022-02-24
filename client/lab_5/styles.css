@@ -141,13 +141,7 @@ margin-left: 32px;
   cursor: pointer;
 }
 #talk-type-1{
-  height: 16px;
-width: 16px;
-justify-self: left;
-}
-#talk-type-2{
-  height: 16px;
-width: 16px;
+  align-items: center;
 }
 
 .form-row button:hover {
@@ -220,7 +214,7 @@ justify-content: left;
     width: 240px;
     display: inline-block;
   text-align: left;
-  font-size: 14px;
+  font-size: 1px;
   }
   
   input[type='radio'] {
