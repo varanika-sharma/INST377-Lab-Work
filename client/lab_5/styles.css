@@ -134,6 +134,9 @@ body {
   padding: 10px 40px;
   cursor: pointer;
 }
+#talk-type-1{
+  align-items: center;
+}
 
 .form-row button:hover {
   background-color: #76AEED;
