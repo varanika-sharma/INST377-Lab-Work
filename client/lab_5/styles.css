@@ -100,10 +100,8 @@ body {
 }
 
 .legacy-form-row .radio-label {
-  display: block;
+  display: inline-block;
   font-size: 14px;
-  padding: 0 10px 0 10px;
-  justify-self: flex-start;
 }
 
  input[type='radio'] {
