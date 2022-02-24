@@ -141,7 +141,8 @@ margin-left: 32px;
   cursor: pointer;
 }
 #talk-type-1{
-  align-items: center;
+  height: 16px;
+width: 16px;
 }
 
 .form-row button:hover {
