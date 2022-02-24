@@ -105,9 +105,7 @@ body {
 }
 
  input[type='radio'] {
-   justify-items: left;
-    height: fit-content;
-    width:fit-content;
+
     
 }
   
