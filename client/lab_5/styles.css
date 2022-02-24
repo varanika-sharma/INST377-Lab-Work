@@ -193,6 +193,7 @@ justify-content: left;
     padding-right: 20px;
   }
   .legacy-form-row {
+    justify-content: left;
     margin-bottom: 10px;
   }
   .legacy-form-row legend {
