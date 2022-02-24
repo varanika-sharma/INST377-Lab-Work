@@ -168,7 +168,11 @@ div.next-week {
     align-items: flex-start; /* To avoid stretching */
     margin-bottom: 20px;
   }
-  .form-row ,  
+  .form-row.container{
+justify-content: left;
+  }
+  .form-row , 
+  
   .form-row select,                 
   .form-row textarea {
     width: auto;
