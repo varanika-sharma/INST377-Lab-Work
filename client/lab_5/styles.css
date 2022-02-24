@@ -27,7 +27,7 @@ body {
   display: flex;
 }
 .container {
-  max-width: 960px;
+  max-width: 300px;
   margin-top: 25px;
   display: flex;
   flex-direction: row;
