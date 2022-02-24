@@ -108,12 +108,12 @@ body {
   padding: 0 20px 0 10px;
 }
 
-.legacy-form-row  {
+.legacy-form-row input[type='radio'] {
   margin-top: 2px;
 }
   
 .legacy-form-row .radio-label,
-.legacy-form-row  {
+.legacy-form-row input[type='radio'] {
   float: left;
 }
 .form-row button {
