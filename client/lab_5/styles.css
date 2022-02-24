@@ -107,8 +107,8 @@ body {
 }
 
 .legacy-form-row input[type='radio'] {
-  margin-top: 2px;
-  align-items: flex-start;
+  margin-top: -1px;
+  vertical-align: middle;
 }
   
 .legacy-form-row .radio-label,
