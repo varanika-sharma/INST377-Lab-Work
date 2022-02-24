@@ -106,7 +106,9 @@ text-align: left;
 }
 
  input[type='radio'] {
-
+height: 16px;
+width: 16px;
+margin-left: 32px;
     
 }
   
@@ -214,7 +216,9 @@ justify-content: left;
   }
   
   input[type='radio'] {
-  
+    height: 16px;
+    width: 16px;
+    margin-left: 32px;
   }
     
   .legacy-form-row .radio-label,
