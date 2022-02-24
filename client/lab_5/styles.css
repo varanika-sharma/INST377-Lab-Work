@@ -141,7 +141,7 @@ body {
 .form-row button:active {
   background-color: #407FC7;
 }
-.next-week {
+div.next-week {
   align-items: center;
   height: fit-content;
   width: fit-content;
