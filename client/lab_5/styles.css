@@ -85,7 +85,6 @@ body {
   border: 1px solid #D6D9DC;
   border-radius: 3px;
   width: 100%;
-  padding: 7px;
   font-size: 14px;
 }
 
@@ -116,7 +115,7 @@ body {
   border: 1px solid #D6D9DC;
   border-radius: 3px;
   width: 100%;
-  padding: 7px;
+
   font-size: 14px;
 }
 .form-row button {
@@ -200,11 +199,23 @@ div.next-week {
   .legacy-form-row legend {
     float: left;
   }
-}
-
-.form-row input[type='text']:invalid,
+  div.next-week {
+    text-align: center;
+    position: center;
+    height: 100px;
+    width: 200px;
+    border: 2px;
+    background-color: lightyellow;
+    flex-basis: 100%;
+    align-self: center;
+  
+  }
+  .form-row input[type='text']:invalid,
 .form-row input[type='email']:invalid {
   border: 1px solid #D55C5F;
   color: #D55C5F;
   box-shadow: none; 
 }
+}
+
+
