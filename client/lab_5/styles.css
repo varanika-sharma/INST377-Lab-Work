@@ -109,12 +109,12 @@ body {
 .legacy-form-row input[type='radio'] {
   margin-top: -1px;
   vertical-align: middle;
-  height: 100%;
 }
   
 .legacy-form-row .radio-label,
 .legacy-form-row input[type='radio'] {
   float: left;
+  align-items: flex-start;
 }
 
   
