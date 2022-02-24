@@ -106,9 +106,15 @@ body {
   float: left;
 }
 
-div {
-
+.legacy-form-row input[type='radio'] {
+  margin-top: 2px;
 }
+  
+.legacy-form-row .radio-label,
+.legacy-form-row input[type='radio'] {
+  float: left;
+}
+
   
 .legacy-form-row .from-user
   {
