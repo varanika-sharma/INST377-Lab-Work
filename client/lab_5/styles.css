@@ -132,14 +132,14 @@ body {
   display: inline-block;
     width:auto;
     height:auto;
-    border: 1px solid red;
+    
 }
 #div2 {
   vertical-align:top;
   display: inline-block;
   width:160px;
   height:160px;
-  border: 1px solid green;
+
 
 }
 @media only screen and (min-width: 700px) {
