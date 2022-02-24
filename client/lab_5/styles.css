@@ -144,6 +144,10 @@ margin-left: 32px;
   height: 16px;
 width: 16px;
 }
+#talk-type-2{
+  height: 16px;
+width: 16px;
+}
 
 .form-row button:hover {
   background-color: #76AEED;
