@@ -143,8 +143,8 @@ body {
 }
 div.next-week {
   align-items: center;
-  height: 20px;
-  width: 60px;
+  height: 100px;
+  width: 200px;
   border: 2px;
   background-color: lightyellow;
 
