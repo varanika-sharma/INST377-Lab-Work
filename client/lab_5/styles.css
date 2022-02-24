@@ -169,7 +169,7 @@ div.right {
   .form-row ,  
   .form-row select,                 
   .form-row textarea {
-    width: 250px;
+    width: auto;
     height: initial;
   }
   .from-user{
