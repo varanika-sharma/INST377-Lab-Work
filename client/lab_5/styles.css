@@ -207,13 +207,12 @@ justify-content: left;
   }
   
   .legacy-form-row .radio-label {
-    display:flex;
-    font-size: 14px;
+    display: inline-block;
+  font-size: 14px;
   }
   
   input[type='radio'] {
-    height: 16px;
-    width:16px;
+  
   }
     
   .legacy-form-row .radio-label,
