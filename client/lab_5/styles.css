@@ -196,21 +196,30 @@ justify-content: left;
     font-size: 14px;
   }
   .form-row label {
-    text-align: right;
-    width: 120px;
-    margin-top: 7px;
-    padding-right: 20px;
+    margin-bottom: 15px;
   }
   .legacy-form-row {
-    justify-content: left;
-    margin-bottom: 10px;
+    border: none;
+    margin-bottom: 40px;
   }
+  
   .legacy-form-row legend {
-    width: 120px;
-    text-align: right;
-    padding-right: 20px;
+    margin-bottom: 15px;
   }
-  .legacy-form-row legend {
+  
+  .legacy-form-row .radio-label {
+    display: block;
+    font-size: 14px;
+    padding: 0 20px 0 10px;
+    justify-self: flex-start;
+  }
+  
+  .legacy-form-row input[type='radio'] {
+    margin-top: 6px;
+  }
+    
+  .legacy-form-row .radio-label,
+  .legacy-form-row input[type='radio'] {
     float: left;
   }
   div.next-week {
