@@ -106,18 +106,16 @@ body {
   float: left;
 }
 
-.legacy-form-row input[type='radio'] {
-  margin-top: -1px;
-  vertical-align: middle;
-}
-  
 .legacy-form-row .radio-label,
 .legacy-form-row input[type='radio'] {
   float: left;
   align-items: flex-start;
 }
 
-  
+.legacy-form-row input[type='radio'] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
 .legacy-form-row .from-user
   {
     background-color: #FFFFFF;
