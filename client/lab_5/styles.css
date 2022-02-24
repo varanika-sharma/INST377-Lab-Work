@@ -128,18 +128,11 @@ body {
 .form-row button:active {
   background-color: #407FC7;
 }
-#div1{
-  display: inline-block;
-    width:auto;
-    height:auto;
-    
-}
-#div2 {
-  vertical-align:top;
-  display: inline-block;
-  width:160px;
-  height:160px;
-
+div.right {
+  display:block;
+  border: 2px;
+  background-color: lightyellow;
+  flex-basis: 100%;
 
 }
 @media only screen and (min-width: 700px) {
