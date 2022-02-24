@@ -102,7 +102,7 @@ body {
 .legacy-form-row .radio-label {
   display: block;
   font-size: 14px;
-  padding: 0 20px 0 10px;
+  padding: 0 10px 0 10px;
   justify-self: flex-start;
 }
 
