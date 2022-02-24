@@ -106,15 +106,19 @@ body {
   display: block;
   font-size: 14px;
   padding: 0 20px 0 10px;
+  float: left;
 }
 
-.legacy-form-row input[type='radio'] {
-  margin-top: 2px;
-}
+
   
-.legacy-form-row .radio-label,
-.legacy-form-row input[type='radio'] {
-  float: left;
+.legacy-form-row .from-user
+  {
+    background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
 }
 .form-row button {
   font-size: 16px;
