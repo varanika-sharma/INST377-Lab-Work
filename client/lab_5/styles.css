@@ -140,6 +140,14 @@ div.right {
   .speaker-form {
     width: 600px;
   }
+  .container {
+    max-width: 300px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:200px;
+  }
   .form-row {
     flex-direction: row;
     align-items: flex-start; /* To avoid stretching */
