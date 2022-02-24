@@ -130,8 +130,8 @@ body {
 }
 #div1{
   display: inline-block;
-    width:120px;
-    height:120px;
+    width:auto;
+    height:auto;
     border: 1px solid red;
 }
 #div2 {
