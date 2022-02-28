@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(rightTimerId);
   }
   function fall() {
-    clearInterval(upTimerId);
     isJumping = false;
+    clearInterval(upTimerId);
     downTimerId = setInterval(() => {
       doodlerBottomSpace -= 5;
       doodler.style.bottom = doodlerBottomSpace + 'px';
@@ -91,19 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
       platforms.forEach((platform) => {
         if (
           (doodlerBottomSpace >= platform.bottom)
-            && (doodlerBottomSpace <= platform.bottom + 15)
-            && ((doodlerBottomSpace + 60) >= platform.left)
+            && (doodlerBottomSpace <= (platform.bottom + 15))
+            && ((doodlerLeftSpace + 60) >= platform.left)
             && (doodlerLeftSpace <= (platform.left + 85))
             && !isJumping
         ) {
-          console.log('landed');
+          console.log('tick');
           startPoint = doodlerBottomSpace;
           jump();
+          console.log('start', startPoint);
           isJumping = true;
         }
       });
     }, 20);
   }
+
   function jump() {
     clearInterval(downTimerId);
     isJumping = true;
