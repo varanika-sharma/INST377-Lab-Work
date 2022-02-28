@@ -48,10 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+  
+  function fall() {
+    clearInterval(upTimerId);
+    downTimerId = setInterval(() => {
+      doodlerBottomSpace -= 5;
+      doodler.style.bottom = doodlerBottomSpace + 'px';
+    },30);
+  }
   function jump() {
+    clearInterval(downTimerId);
     upTimerId = setInterval(() => {
       doodlerBottomSpace += 20;
       doodler.style.bottom = doodlerBottomSpace + 'px';
+      if (doodlerBottomSpace > 350) {
+        fall();
+      }
     }, 30);
   }
   function start() {
