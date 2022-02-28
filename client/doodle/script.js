@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let newPlatBottom = 100 + i * platGap;
       let newPlatform = new Platform(newPlatBottom);
     }
-}
+  }
   function start() {
     if (!isGameOver) {
       createDoodler();
