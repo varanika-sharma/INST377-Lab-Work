@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-param-reassign */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable prefer-const */
@@ -6,10 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
   const doodler = document.createElement('div');
   let doodlerLeftSpace = 50;
-  let doodlerBottomSpace = 250;
+  let doodlerBottomSpace = 150;
   let isGameOver = false;
   let platformCount = 5;
   let platforms = [];
+  let upTimerId;
+  let downTimerId;
   function createDoodler() {
     grid.appendChild(doodler);
     doodler.classList.add('doodler');
@@ -45,11 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+  function jump() {
+    upTimerId = setInterval(() => {
+      doodlerBottomSpace += 20;
+      doodler.style.bottom = doodlerBottomSpace + 'px';
+    }, 30);
+  }
   function start() {
     if (!isGameOver) {
       createDoodler();
       createPlatforms();
       setInterval(movePlatforms, 30);
+      jump();
     }
   }
   start();
