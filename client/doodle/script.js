@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function createDoodler() {
     grid.appendChild(doodler);
     doodler.classList.add('doodler');
+    doodler.style.left = '50px';
   }
   createDoodler();
 })
