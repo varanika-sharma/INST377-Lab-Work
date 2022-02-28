@@ -108,8 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(downTimerId);
     isJumping = true;
     upTimerId = setInterval(() => {
+      console.log(startPoint);
+      console.log('1', doodlerBottomSpace);
       doodlerBottomSpace += 20;
       doodler.style.bottom = doodlerBottomSpace + 'px';
+      console.log('2', doodlerBottomSpace);
+      console.log('s', startPoint);
       if (doodlerBottomSpace > (startPoint + 200)) {
         fall();
         isJumping = false;
