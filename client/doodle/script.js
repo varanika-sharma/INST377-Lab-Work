@@ -147,10 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 20);
   }
   function moveStraight() {
-    isGoingRight = false;
     isGoingLeft = false;
-    clearInterval(rightTimerId);
+    isGoingRight = false;
     clearInterval(leftTimerId);
+    clearInterval(rightTimerId);
   }
   function control(e) {
     if (e.key === 'ArrowLeft') {
