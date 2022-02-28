@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
   const doodler = document.createElement('div');
   let doodlerLeftSpace = 50;
-  let doodlerBottomSpace = 150;
+  let doodlerBottomSpace = 250;
   let isGameOver = false;
   let platformCount = 5;
   let platforms = [];
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isGameOver) {
       createDoodler();
       createPlatforms();
-      movePlatforms();
+      setInterval(movePlatforms(),30);
     }
   }
   start();
