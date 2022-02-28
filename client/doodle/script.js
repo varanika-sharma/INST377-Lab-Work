@@ -123,13 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
       } else moveLeft();
     }, 30);
   }
+  function moveStraight() {
+    isGoingRight = false;
+    isGoingLeft = false;
+    clearInterval(rightTimerId);
+    clearInterval(leftTimerId);
+  }
   function control(e) {
     if (e.key === 'ArrowLeft') {
       moveLeft();
     } else if (e.key === 'ArrowRight') {
       moveRight();
     } else if (e.key === 'ArrowUp') {
-      // moveStraight
+      moveStraight();
     }
   }
 
