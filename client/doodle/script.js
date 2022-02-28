@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
           firstPlatform.classList.remove('platform');
           platforms.shift();
           console.log(platforms);
+          let newPlatform = new Platform(600);
+          platforms.push(newPlatform);
         }
       });
     }
@@ -67,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
     isGameOver = true;
     clearInterval(upTimerId);
     clearInterval(downTimerId);
+    clearInterval(leftTimerId);
+    clearInterval(rightTimerId);
   }
   function fall() {
     clearInterval(upTimerId);
@@ -127,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         doodlerLeftSpace += 5;
         doodler.style.left = doodlerLeftSpace + 'px';
       } else moveLeft();
-    }, 30);
+    }, 20);
   }
   function moveStraight() {
     isGoingRight = false;
