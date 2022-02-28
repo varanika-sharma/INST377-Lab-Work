@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable func-names */
 /* eslint-disable no-param-reassign */
 /* eslint-disable prefer-destructuring */
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let platforms = [];
   let upTimerId;
   let downTimerId;
+  let isJumping = true;
   function createDoodler() {
     grid.appendChild(doodler);
     doodler.classList.add('doodler');
@@ -55,18 +57,33 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(upTimerId);
     clearInterval(downTimerId);
   }
+  
   function fall() {
     clearInterval(upTimerId);
+    isJumping = false;
     downTimerId = setInterval(() => {
       doodlerBottomSpace -= 5;
       doodler.style.bottom = doodlerBottomSpace + 'px';
       if (doodlerBottomSpace <= 0) {
         gameOver();
       }
+      platforms.forEach((platform) => {
+        if (
+          (doodlerBottomSpace >= platform.bottom)
+            && (doodlerBottomSpace <= platform.bottom + 15)
+            && ((doodlerBottomSpace + 60) >= platform.left)
+            && (doodlerLeftSpace <= (platform.left + 85))
+            && !isJumping
+        ) {
+          console.log('landed');
+          jump();
+        }
+      });
     }, 30);
   }
   function jump() {
     clearInterval(downTimerId);
+    isJumping = true;
     upTimerId = setInterval(() => {
       doodlerBottomSpace += 20;
       doodler.style.bottom = doodlerBottomSpace + 'px';
@@ -74,6 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
         fall();
       }
     }, 30);
+  }
+  function control(e) {
+    if (e.key === 'ArrowLeft') {
+      // move left
+    } else if (e.key === 'ArrowRight') {
+      // move right
+    } else if (e.key === 'ArrowUp') {
+      // moveStraight
+    }
   }
   function start() {
     if (!isGameOver) {
