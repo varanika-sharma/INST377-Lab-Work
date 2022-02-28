@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       doodlerBottomSpace -= 5;
       doodler.style.bottom = doodlerBottomSpace + 'px';
       if (doodlerBottomSpace <= 0) {
-        isGameOver();
+        gameOver();
       }
     }, 30);
   }
