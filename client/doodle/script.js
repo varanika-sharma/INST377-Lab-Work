@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
   const doodler = document.createElement('div');
   let doodlerLeftSpace = 50;
-  let doodlerBottomSpace = 150;
+  let startPoint = 150;
+  let doodlerBottomSpace = startPoint;
   let isGameOver = false;
   let platformCount = 5;
   let platforms = [];
@@ -57,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(upTimerId);
     clearInterval(downTimerId);
   }
-  
   function fall() {
     clearInterval(upTimerId);
     isJumping = false;
@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             && !isJumping
         ) {
           console.log('landed');
+          startPoint = doodlerBottomSpace;
           jump();
         }
       });
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     upTimerId = setInterval(() => {
       doodlerBottomSpace += 20;
       doodler.style.bottom = doodlerBottomSpace + 'px';
-      if (doodlerBottomSpace > 350) {
+      if (doodlerBottomSpace > startPoint + 200) {
         fall();
       }
     }, 30);
