@@ -99,9 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log('landed');
           startPoint = doodlerBottomSpace;
           jump();
+          isJumping = true;
         }
       });
-    }, 30);
+    }, 20);
   }
   function jump() {
     clearInterval(downTimerId);
@@ -109,8 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
     upTimerId = setInterval(() => {
       doodlerBottomSpace += 20;
       doodler.style.bottom = doodlerBottomSpace + 'px';
-      if (doodlerBottomSpace > startPoint + 200) {
+      if (doodlerBottomSpace > (startPoint + 200)) {
         fall();
+        isJumping = false;
       }
     }, 30);
   }
