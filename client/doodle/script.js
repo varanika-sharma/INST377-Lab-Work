@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isGameOver) {
       createDoodler();
       createPlatforms();
-      setInterval(movePlatforms(),30);
+      setInterval(movePlatforms, 30);
     }
   }
   start();
