@@ -151,7 +151,7 @@
   .form-row button:active {
     background-color: #407FC7;
   }
-  div.next-week {
+  .next-week #resto-list {
     text-align: center;
     height: 100px;
     width: 200px;
