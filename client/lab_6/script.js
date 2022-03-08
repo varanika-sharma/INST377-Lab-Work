@@ -5,7 +5,7 @@ function dataHandler(dataArray) {
     const range = [...Array(15).keys()];
     range.forEach(item => {
         console.log('range item', item);
-    })
+    });
 }
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.lab-form');
