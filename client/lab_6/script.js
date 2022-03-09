@@ -8,6 +8,7 @@ function dataHandler(dataArray) {
   });
 }
 async function mainEvent() { // the async keyword means we can make API requests
+  console.log('submisson loaded');
   const form = document.querySelector('.lab-form');
   const submit = document.querySelector('.form-row');
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
