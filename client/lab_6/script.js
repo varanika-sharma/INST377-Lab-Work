@@ -9,7 +9,7 @@ function dataHandler(dataArray) {
 }
 async function mainEvent() { // the async keyword means we can make API requests
   const form = document.querySelector('.lab-form');
-  const submit = document.querySelector('.form-row ');
+  const submit = document.querySelector('.form-row');
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   if (arrayFromJson.data.length > 0) {
@@ -21,9 +21,10 @@ async function mainEvent() { // the async keyword means we can make API requests
       // this is called "dot notation"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      dataHandler(arrayFromJson.data);
+      dataHandler(arrayFromJson.data());
     });
   }
+
+  // this actually runs first! It's calling the function above
+  document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
 }
-// this actually runs first! It's calling the function above
-document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
