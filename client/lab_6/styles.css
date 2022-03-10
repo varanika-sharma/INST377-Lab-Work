@@ -156,7 +156,7 @@
     height: fit-content;
     width: 500px;
     background-color: lightyellow;
-    margin: 20px;
+    border: 2px;
 
   
   }
@@ -235,8 +235,7 @@
       width: 500px;
       border: 2px;
       background-color: lightyellow;
-      flex-basis: 100%;
-      margin: 20px;
+    
     
     }
     h2 {
