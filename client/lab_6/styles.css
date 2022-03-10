@@ -227,7 +227,7 @@
     .legacy-form-row input[type='radio'] {
       float: left;
     }
-    div.next-week {
+    .next-week {
       text-align: center;
       position: center;
       height: 100px;
@@ -236,8 +236,10 @@
       background-color: lightyellow;
       flex-basis: 100%;
       align-self: center;
-      margin: 25px;
     
+    }
+    h2 {
+        text-align: center;
     }
     .form-row input[type='text']:invalid,
   .form-row input[type='email']:invalid {
