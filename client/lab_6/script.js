@@ -32,7 +32,7 @@ function createHtmlList(collection) {
 async function mainEvent() { // the async keyword means we can make API requests
   console.log('submisson loaded');
   const form = document.querySelector('.lab-form');
-  const submit = document.querySelector('.form-row');
+  const submit = document.querySelector('div.form-row');
   submit.style.display = 'none';
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
