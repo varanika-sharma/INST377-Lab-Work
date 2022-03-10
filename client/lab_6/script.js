@@ -21,6 +21,7 @@ function createHtmlList(collection) {
   console.log('created HTML creator');
   console.log(collection);
   const targetList = document.querySelector('#resto-list');
+  targetList.innerHTML = '';
   collection.forEach((item) => {
     const injectThis = `<li>${item.name}</li>`;
     targetList.innerHTML += injectThis;
