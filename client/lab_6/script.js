@@ -1,5 +1,9 @@
 // As the last step of your lab, hook this up to index.html
-
+function getRandomIntInclusive(min, max) {
+  const newMin = Math.ceil(min);
+  const newMax = Math.floor(max);
+  return Math.floor(Math.random() * (newMax - newMin + 1) + newMin);
+}
 function dataHandler(dataArray) {
   console.table(dataArray);
   const range = [...Array(15).keys()];
@@ -11,6 +15,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   console.log('submisson loaded');
   const form = document.querySelector('.lab-form');
   const submit = document.querySelector('.form-row');
+  submit.style.display = 'none';
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   if (arrayFromJson.data.length > 0) {

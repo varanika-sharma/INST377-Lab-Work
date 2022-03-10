@@ -236,6 +236,7 @@
       background-color: lightyellow;
       flex-basis: 100%;
       align-self: center;
+      margin: 25px;
     
     }
     .form-row input[type='text']:invalid,
