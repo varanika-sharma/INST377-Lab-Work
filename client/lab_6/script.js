@@ -23,7 +23,7 @@ function createHtmlList(collection) {
   const targetList = document.querySelector('#resto-list');
   collection.forEach((item) => {
     const injectThis = `<li>${item.name}</li>`;
-    targetList.appendChild(injectThis);
+    targetList.innerHTML = injectThis;
   });
 }
 async function mainEvent() { // the async keyword means we can make API requests
