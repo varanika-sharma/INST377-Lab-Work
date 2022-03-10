@@ -5,17 +5,20 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (newMax - newMin + 1) + newMin);
 }
 function restoArrayMaker(dataArray) {
-  console.table(dataArray);
+  // console.table(dataArray);
   const range = [...Array(15).keys()];
   const listItems = range.map((item, index) => {
     const restNum = getRandomIntInclusive(0, dataArray.length - 1);
     return dataArray[restNum];
   });
-  console.log(listItems);
+  // console.log(listItems);
   return listItems;
   // range.forEach((item) => {
   // console.log('range item', item);
   // });
+}
+function createHtmlList(collection) {
+  console.log(collection);
 }
 async function mainEvent() { // the async keyword means we can make API requests
   console.log('submisson loaded');
@@ -35,6 +38,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
       const restoArray = restoArrayMaker(arrayFromJson.data);
+      createHtmlList(restoArray);
     });
   }
 }
