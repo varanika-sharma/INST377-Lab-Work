@@ -154,7 +154,7 @@
   .next-week #resto-list {
     text-align: center;
     height: fit-content;
-    width: 1150px;
+    width: 500px;
     border: 2px;
     background-color: lightyellow;
     flex-basis: 100%;
@@ -234,7 +234,7 @@
     .next-week {
       text-align: center;
       height: fit-content;
-      width: 1150px;
+      width: 500px;
       border: 2px;
       background-color: lightyellow;
       flex-basis: 100%;
