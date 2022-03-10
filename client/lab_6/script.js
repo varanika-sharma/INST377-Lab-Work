@@ -7,9 +7,14 @@ function getRandomIntInclusive(min, max) {
 function dataHandler(dataArray) {
   console.table(dataArray);
   const range = [...Array(15).keys()];
-  range.forEach((item) => {
-    console.log('range item', item);
+  const listItems = range.map((item, index) => {
+    const restNum = getRandomIntInclusive(0, dataArray.length - 1);
+    return dataArray[restNum];
   });
+  console.log(listItems);
+  // range.forEach((item) => {
+  // console.log('range item', item);
+  // });
 }
 async function mainEvent() { // the async keyword means we can make API requests
   console.log('submisson loaded');
