@@ -229,13 +229,11 @@
     }
     .next-week {
       text-align: center;
-      position: center;
       height: 100px;
       width: 200px;
       border: 2px;
       background-color: lightyellow;
       flex-basis: 100%;
-      align-self: center;
     
     }
     h2 {
