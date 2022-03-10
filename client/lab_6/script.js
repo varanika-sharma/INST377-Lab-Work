@@ -18,7 +18,13 @@ function restoArrayMaker(dataArray) {
   // });
 }
 function createHtmlList(collection) {
+  console.log('created HTML creator');
   console.log(collection);
+  const targetList = document.querySelector('#resto-list');
+  collection.forEach((item) => {
+    const injectThis = `<li>${item.name}</li>`;
+    targetList.appendChild(injectThis);
+  });
 }
 async function mainEvent() { // the async keyword means we can make API requests
   console.log('submisson loaded');
