@@ -38,7 +38,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   console.log(arrayFromJson);
   if (arrayFromJson.data.length > 0) {
-    submit.getElementsByClassName.display = 'block';
+    submit.style.display = 'block';
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
       console.log('form submission'); // this is substituting for a "breakpoint"
