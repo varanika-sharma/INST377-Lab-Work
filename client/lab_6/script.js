@@ -25,7 +25,7 @@ function createHtmlList(collection) {
   collection.forEach((item) => {
     const {name} = item;
     const displayName = name.toLowerCase();
-    const injectThis = `<li>${item.name}</li>`;
+    const injectThis = `<li>${item.id}</li>`;
     targetList.innerHTML += injectThis;
   });
 }
