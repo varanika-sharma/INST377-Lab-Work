@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 // As the last step of your lab, hook this up to index.html
 function getRandomIntInclusive(min, max) {
   const newMin = Math.ceil(min);
