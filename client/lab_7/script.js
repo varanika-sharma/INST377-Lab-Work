@@ -43,13 +43,16 @@ async function mainEvent() { // the async keyword means we can make API requests
   console.log(arrayFromJson);
   if (arrayFromJson.data.length > 0) { // This is to prevent a race condition on data load
     submit.style.display = 'block';
-    const currentArray = [];
+    let currentArray = [];
     resto.addEventListener('input', async (event) => {
-      if (currentArray === undefined) { return; }
       console.log(event.target.value);
-      const matchResto = currentArray.filter((item) => {
+      if (currentArray.length < 1) {
+        return;
+      }
+      currentArray.filter((item) => {
         console.log(item);
-        item.name.includes(event.target.value);
+        console.log(item.name);
+        return item.name.includes(event.target.value);
       });
       // console.log(matchResto);
     });
@@ -60,8 +63,8 @@ async function mainEvent() { // the async keyword means we can make API requests
       // this is called "dot notation"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      const restoArray = restoArrayMaker(arrayFromJson.data);
-      createHtmlList(restoArray);
+      currentArray = restoArrayMaker(arrayFromJson.data);
+      createHtmlList(currentArray);
     });
   }
 }
