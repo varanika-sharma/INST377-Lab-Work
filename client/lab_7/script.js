@@ -64,8 +64,8 @@ async function mainEvent() { // the async keyword means we can make API requests
       // this is called "dot notation"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      currentArray = restoArrayMaker(arrayFromJson.data);
-      createHtmlList(currentArray);
+      restoArray = restoArrayMaker(arrayFromJson.data);
+      createHtmlList(restoArray);
     });
   }
 
