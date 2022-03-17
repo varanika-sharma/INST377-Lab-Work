@@ -43,15 +43,15 @@ async function mainEvent() { // the async keyword means we can make API requests
   console.log(arrayFromJson);
   if (arrayFromJson.data.length > 0) { // This is to prevent a race condition on data load
     submit.style.display = 'block';
-    let currentArray = [];
+    const currentArray = [];
     resto.addEventListener('input', async (event) => {
-      console.log(event.target.value);
-      if (currentArray.length < 1) {
-        return;
-      }
-      const selectedRest =currentArray.filter((item) => item.name.includes(event.target.value));
+      if (currentArray === undefined) { return; }
+      const matchResto = currentArray.filter((item) => {
+        console.log(item);
+        item.name.includes(event.target.value);
       });
       // console.log(matchResto);
+    });
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
       console.log('form submission'); // this is substituting for a "breakpoint"
@@ -59,11 +59,11 @@ async function mainEvent() { // the async keyword means we can make API requests
       // this is called "dot notation"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
       // it contains all 1,000 records we need
-      currentArray = restoArrayMaker(arrayFromJson.data);
-      createHtmlList(currentArray);
+      const restoArray = restoArrayMaker(arrayFromJson.data);
+      createHtmlList(restoArray);
     });
   }
-
+}
 
 // this actually runs first! It's calling the function above
 document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
