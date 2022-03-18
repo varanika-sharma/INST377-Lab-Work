@@ -31,7 +31,7 @@ function createHtmlList(collection) {
   });
 }
 async function mainEvent() { // the async keyword means we can make API requests
-  console.log('submisson loaded');
+  console.log('submission loaded');
   const form = document.querySelector('.lab-form');
   const submit = document.querySelector('.btn');
   const resto = document.querySelector('#resto_name');
