@@ -160,6 +160,9 @@
 
   
   }
+  h2 {
+      text-align: center;
+  }
   @media only screen and (min-width: 700px) {
     .speaker-form-header,
     .speaker-form {
@@ -234,6 +237,9 @@
       background-color: lightyellow;
     
     
+    }
+    h2 {
+        text-align: center;
     }
     .form-row input[type='text']:invalid,
   .form-row input[type='email']:invalid {
