@@ -46,9 +46,11 @@ async function mainEvent() { // the async keyword means we can make API requests
     resto.addEventListener('input', async (event) => {
       if (currentArray === undefined) { return; }
       console.log(event.target.value);
-      const matchResto = currentArray.filter((item) => item.name.includes(event.target.value));
+      const matchResto = currentArray.filter((item) => {
+          console.log(item.name);
+      return item.name.includes(event.target.value);
       console.log(matchResto);
-    });
+      });
 
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
@@ -62,6 +64,6 @@ async function mainEvent() { // the async keyword means we can make API requests
     });
   }
 }
-
 // this actually runs first! It's calling the function above
 document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
+}
