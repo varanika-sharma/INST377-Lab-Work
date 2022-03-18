@@ -49,7 +49,12 @@ async function mainEvent() { // the async keyword means we can make API requests
         return;
       }
 
-      const selectedResto = currentArray.filter((item) => item.name.includes(event.target.value));
+      const selectedResto = currentArray.filter((item) => {
+        const lowerName = item.name.toLowerCase();
+        const lowerValue = event.target.value.toLowerCase();
+        return lowerName.includes(lowerValue);
+      });
+
       console.log(selectedResto);
       // createHtmlList(selectedResto);
     });
