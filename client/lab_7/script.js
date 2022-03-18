@@ -51,7 +51,7 @@ async function mainEvent() { // the async keyword means we can make API requests
         console.log(item.name);
         return item.name.includes(event.target.value);
       });
-      console.log(matchResto);
+      // console.log(matchResto);
     });
 
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
