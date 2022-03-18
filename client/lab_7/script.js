@@ -59,15 +59,19 @@ async function mainEvent() { // the async keyword means we can make API requests
       createHtmlList(selectedResto);
     });
     const numArray = [];
-    // zipcode.addEventListener('input', async (numevent) => {
-    //   console.log(numevent.target.value);
-    //    if (numArray.length < 1) {
-    //      return;
-    //    }
-    //    const zipResto = numArray.filter((number) => {
-    //        const zip = number.
-    //    })
-    //  });
+    zipcode.addEventListener('input', async (numevent) => {
+      console.log(numevent.target.value);
+      if (numArray.length < 1) {
+        return;
+      }
+      const zipResto = numArray.filter((num) => {
+        const location = num.zip.Number();
+        const realNum = numevent.target.value.Number();
+        return location.includes(realNum);
+      });
+      console.log(zipResto);
+      createHtmlList(zipResto);
+    });
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
       // console.log('form submission'); // this is substituting for a "breakpoint"
