@@ -50,6 +50,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       }
 
       const selectedResto = currentArray.filter((item) => item.name.includes(event.target.value));
+      createHtmlList(selectedResto);
       // console.log(matchResto);
     });
 
