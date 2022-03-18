@@ -34,7 +34,6 @@ async function mainEvent() { // the async keyword means we can make API requests
   console.log('submisson loaded');
   const form = document.querySelector('.lab-form');
   const submit = document.querySelector('.btn');
-
   const resto = document.querySelector('#resto_name');
   const zipcode = document.querySelector('#zipcode');
   submit.style.display = 'none';
@@ -45,13 +44,9 @@ async function mainEvent() { // the async keyword means we can make API requests
     submit.style.display = 'block';
     const currentArray = [];
     resto.addEventListener('input', async (event) => {
-      if (currentArray === undefined) { return; }
-      const matchResto = currentArray.filter((item) => {
-        console.log(item);
-        item.name.includes(event.target.value);
-      });
-      // console.log(matchResto);
+      console.log(event.target.value);
     });
+
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
       console.log('form submission'); // this is substituting for a "breakpoint"
