@@ -20,7 +20,7 @@ function restoArrayMaker(dataArray) {
 }
 function createHtmlList(collection) {
   // console.log('created HTML creator');
-  console.log(collection);
+  // console.log(collection);
   const targetList = document.querySelector('#resto-list');
   targetList.innerHTML = '';
   collection.forEach((item) => {
@@ -50,8 +50,8 @@ async function mainEvent() { // the async keyword means we can make API requests
       }
 
       const selectedResto = currentArray.filter((item) => item.name.includes(event.target.value));
-      createHtmlList(selectedResto);
-      // console.log(matchResto);
+      console.log(selectedResto);
+      // createHtmlList(selectedResto);
     });
 
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
