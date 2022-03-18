@@ -39,7 +39,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   submit.style.display = 'none';
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
-  console.log(arrayFromJson);
+  // console.log(arrayFromJson);
   if (arrayFromJson.data.length > 0) { // This is to prevent a race condition on data load
     submit.style.display = 'block';
     const currentArray = [];
@@ -49,7 +49,7 @@ async function mainEvent() { // the async keyword means we can make API requests
 
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
       submitEvent.preventDefault(); // This prevents your page from refreshing!
-      console.log('form submission'); // this is substituting for a "breakpoint"
+      // console.log('form submission'); // this is substituting for a "breakpoint"
 
       // this is called "dot notation"
       // arrayFromJson.data - we're accessing a key called 'data' on the returned object
