@@ -44,8 +44,10 @@ async function mainEvent() { // the async keyword means we can make API requests
     submit.style.display = 'block';
     const currentArray = [];
     resto.addEventListener('input', async (event) => {
-      if (currentArray === undefined) { return; }
-      console.log(event.target.value);
+      if (currentArray.length < 1) {
+        return;
+      }
+      // console.log(event.target.value);
       currentArray.filter((item) => {
         console.log(item);
         console.log(item.name);
