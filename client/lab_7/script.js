@@ -43,6 +43,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   if (arrayFromJson.data.length > 0) { // This is to prevent a race condition on data load
     submit.style.display = 'block';
     let currentArray = [];
+    let numArray = [];
     resto.addEventListener('input', async (event) => {
       console.log(event.target.value);
       if (currentArray.length < 1) {
@@ -58,7 +59,6 @@ async function mainEvent() { // the async keyword means we can make API requests
       console.log(selectedResto);
       createHtmlList(selectedResto);
     });
-    const numArray = [];
     zipcode.addEventListener('input', async (numevent) => {
       console.log(numevent.target.value);
       if (numArray.length < 1) {
