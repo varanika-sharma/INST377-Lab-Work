@@ -63,9 +63,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       if (currentArray.length < 1) {
         return;
       }
-      const zipResto = currentArray.filter((num) => {
-        num.zip.includes(num.target.value);
-      });
+      const zipResto = currentArray.filter((num) => num.zip.includes(num.target.value));
       console.log(zipResto);
       createHtmlList(zipResto);
     });
