@@ -4,9 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const gameDisplay = document.querySelector('.game-container');
   const ground = document.querySelector('.ground');
   const birdLeft = 220;
-  const birdBottom = 100;
+  let birdBottom = 100;
+  const gravity = 2;
   function startGame() {
+    birdBottom -= gravity;
     bird.style.bottom = birdBottom + '.px';
+    bird.style.left = birdLeft + 'px';
   }
-  startGame();
+  const timerId = setInterval(startGame, 20);
+  function jump() {
+    birdBottom += 50;
+    bird.style.bottom = birdBottom + 'px';
+    console.log(birdBottom);
+  }
+  document.addEventListener('keyup', jump);
 });
