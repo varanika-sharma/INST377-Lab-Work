@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let birdBottom = 100;
   const gravity = 2;
   let isGameOver = false;
+  const gap = 400;
   function startGame() {
     birdBottom -= gravity;
     bird.style.bottom = birdBottom + '.px';
@@ -33,10 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomHeight = Math.random() * 60;
     const obstacleBottom = randomHeight;
     const obstacle = document.createElement('div');
-    if (!isGameOver) obstacle.classList.add('obstacle');
+    const topObstacle = document.createElement('div');
+    if (!isGameOver) {
+      obstacle.classList.add('obstacle');
+      topObstacle.classList.add('topObstacle');
+    }
+    
     gameDisplay.appendChild(obstacle);
+    gameDisplay.appendChild(topObstacle);
     obstacle.style.left = obstacleLeft + 'px';
     obstacle.style.bottom = obstacleBottom + 'px';
+    topObstacle.style.left = obstacleLeft + 'px';
+    topObstacle.style.bottom = obstacleBottom + gap + 'px';
     function moveObstacle() {
       obstacleLeft -= 2;
       obstacle.style.left = obstacleLeft + 'px';
