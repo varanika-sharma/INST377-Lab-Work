@@ -1,7 +1,19 @@
+.body {
+    display: flex;
+}
+
 .game-container {
     width: 500px;
     height: 730px;
     position: absolute;
+    left: 60px;
+}
+.border-left {
+   width: 60px;
+   height: 790px; 
+   position: absolute;
+   background-color: white;
+   z-index: +1;
 }
 .sky {
     background-color: lightblue;
@@ -15,6 +27,7 @@
     height: 150px;
     position: absolute;
     top:580px;
+    z-index: +1;
 }
 .bird {
     background-image: url(flappy-bird.png);
