@@ -26,9 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keyup', jump);
   function generateObstacle() {
+    let obstacleLeft = 500;
+    const randomHeight = Math.random() * 60;
+    const obstacleBottom = randomHeight;
     const obstacle = document.createElement('div');
     obstacle.classList.add('obstacle');
     gameDisplay.appendChild(obstacle);
+    obstacle.style.left = obstacleLeft + 'px';
+    obstacle.style.bottom = obstacleBottom + 'px';
+    function moveObstacle() {
+      obstacleLeft -= 2;
+      obstacle.style.left = obstacleLeft + 'px';
+    }
+    const movetimerId = setInterval(moveObstacle, 20);
   }
   generateObstacle();
 });
