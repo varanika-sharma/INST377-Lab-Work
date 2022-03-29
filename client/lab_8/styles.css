@@ -158,8 +158,10 @@
     width: 500px;
     background-color: lightyellow;
     border: 2px;
-
-  
+    
+  }
+  .next-week-wide {
+      width: 640px;
   }
   h2 {
       text-align: center;
