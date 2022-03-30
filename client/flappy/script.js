@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  document.addEventListener('keyup', jump);
+  document.addEventListener('keyup', control);
   function generateObstacle() {
     let obstacleLeft = 500;
     const randomHeight = Math.random() * 60;
@@ -64,11 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const movetimerId = setInterval(moveObstacle, 20);
     if (!isGameOver) setTimeout(generateObstacle, 3000);
   }
+  generateObstacle();
   function gameOver() {
     clearInterval(timerId);
     console.log('game over');
     isGameOver = true;
     document.removeEventListener('keyup', control);
+    ground.classList.add('ground');
+    ground.classList.remove('ground-moving');
   }
-  generateObstacle();
 });
