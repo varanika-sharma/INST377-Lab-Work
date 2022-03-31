@@ -42,6 +42,13 @@ function initMap() {
   }).addTo(map);
   return map;
 }
+function addMapMarkers(map, collection) {
+  collection.forEach((item) => {
+    const point = item.geocoded_column_1?.coordinates;
+    console.log(item.geocoded_column_1?.coordinates);
+    L.marker(point).addTo(map);
+  });
+}
 async function mainEvent() { // the async keyword means we can make API requests
   console.log('submission loaded');
   const form = document.querySelector('.lab-form');
@@ -53,7 +60,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   console.log(arrayFromJson);
-  localStorage.setItem('restaurants',JSON.stringify(arrayFromJson));
+  localStorage.setItem('restaurants', JSON.stringify(arrayFromJson));
   const storedData = localStorage.getItem('restaurants');
   console.log(storedData);
   if (arrayFromJson.data.length > 0) { // This is to prevent a race condition on data load
@@ -93,6 +100,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       currentArray = restoArrayMaker(arrayFromJson.data);
       console.log(currentArray);
       createHtmlList(currentArray);
+      addMapMarkers(map,currentArray);
     });
   }
 }
