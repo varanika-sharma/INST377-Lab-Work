@@ -31,7 +31,8 @@ function createHtmlList(collection) {
   });
 }
 function initMap() {
-  const map = L.map('map').setView([38.989697, -76.937759], 13);
+  const lat = [38.784, -76.872];
+  const map = L.map('map').setView([lat], 13);
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -53,7 +54,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   const results = await fetch('/api/foodServicesPG'); // This accesses some data from our API
   const arrayFromJson = await results.json(); // This changes it into data we can use - an object
   console.log(arrayFromJson);
-  localStorage.setItem('restaurants',JSON.stringify(arrayFromJson));
+  localStorage.setItem('restaurants', JSON.stringify(arrayFromJson));
   const storedData = localStorage.getItem('restaurants');
   console.log(storedData);
   if (arrayFromJson.data.length > 0) { // This is to prevent a race condition on data load
