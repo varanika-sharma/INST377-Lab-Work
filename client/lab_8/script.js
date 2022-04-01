@@ -46,7 +46,7 @@ function addMapMarkers(map, collection) {
   collection.forEach((item) => {
     const point = item.geocoded_column_1?.coordinates;
     console.log(item.geocoded_column_1?.coordinates);
-    L.marker(point).addTo(map);
+    L.marker([point[1],point[0]]).addTo(map);
   });
 }
 async function mainEvent() { // the async keyword means we can make API requests
