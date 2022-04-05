@@ -55,9 +55,10 @@ function addMapMarkers(map, collection) {
     console.log(item.geocoded_column_1?.coordinates);
     L.marker([point[1], point[0]]).addTo(map);
     if (count === 0) {
-      map.panTo(point[1],point[0]);
+      map.panTo(point);
       count += 1;
     }
+    return map;
   });
 }
 async function mainEvent() { // the async keyword means we can make API requests
