@@ -43,6 +43,7 @@ function initMap() {
   return map;
 }
 function addMapMarkers(map, collection) {
+  let count = 0;
   map.eachLayer((layer) => {
     if (layer instanceof L.Marker) {
       // console.log(layer);
@@ -53,6 +54,10 @@ function addMapMarkers(map, collection) {
     const point = item.geocoded_column_1?.coordinates;
     console.log(item.geocoded_column_1?.coordinates);
     L.marker([point[1], point[0]]).addTo(map);
+    if (count === 0) {
+      map.panTo(point[1],point[0]);
+      count += 1;
+    }
   });
 }
 async function mainEvent() { // the async keyword means we can make API requests
