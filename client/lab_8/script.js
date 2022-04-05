@@ -85,7 +85,12 @@ async function mainEvent() { // the async keyword means we can make API requests
       });
 
       console.log(selectedResto);
-      createHtmlList(selectedResto);
+      if (selectedResto.length > 0) {
+        createHtmlList(selectedResto);
+        addMapMarkers(map, selectedResto);
+      } else if (layer instanceof L.Marker) {
+        layer.remove();
+      }
     });
     zipcode.addEventListener('input', async (numevent) => {
       console.log(numevent.target.value);
