@@ -45,7 +45,7 @@ function initMap() {
 function addMapMarkers(map, collection) {
   map.eachLayer((layer) => {
     if (layer instanceof L.Marker) {
-      console.log(layer);
+      // console.log(layer);
       layer.remove();
     }
   });
