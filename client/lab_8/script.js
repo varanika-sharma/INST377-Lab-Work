@@ -95,9 +95,11 @@ async function mainEvent() { // the async keyword means we can make API requests
       }
       const zipResto = currentArray.filter((num) => num.zip.includes(numevent.target.value));
       console.log(zipResto);
-      createHtmlList(zipResto);
-      if (createHtmlList(zipResto) === true) {
+      if (zipResto.length > 0) {
+        createHtmlList(zipResto);
         addMapMarkers(map, zipResto);
+      } else if (layer instanceof L.Marker) {
+        layer.remove();
       }
     });
     form.addEventListener('submit', async (submitEvent) => { // async has to be declared all the way to get an await
