@@ -52,7 +52,7 @@ function addMapMarkers(map, collection) {
   collection.forEach((item) => {
     const point = item.geocoded_column_1?.coordinates;
     console.log(item.geocoded_column_1?.coordinates);
-    L.marker([point[1],point[0]]).addTo(map);
+    L.marker([point[1], point[0]]).addTo(map);
   });
 }
 async function mainEvent() { // the async keyword means we can make API requests
@@ -81,7 +81,8 @@ async function mainEvent() { // the async keyword means we can make API requests
       const selectedResto = currentArray.filter((item) => {
         const lowerName = item.name.toLowerCase();
         const lowerValue = event.target.value.toLowerCase();
-        return lowerName.includes(lowerValue);
+        newValue = lowerName.includes(lowerValue);
+        return newValue;
       });
 
       console.log(selectedResto);
@@ -106,7 +107,7 @@ async function mainEvent() { // the async keyword means we can make API requests
       currentArray = restoArrayMaker(arrayFromJson.data);
       console.log(currentArray);
       createHtmlList(currentArray);
-      addMapMarkers(map,currentArray);
+      addMapMarkers(map, currentArray);
     });
   }
 }
